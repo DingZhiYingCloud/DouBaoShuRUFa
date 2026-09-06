@@ -1,7 +1,7 @@
 {% extends 'template.html' %}
 {% load static %}
 
-{% block title %}服务器错误 - 豆包输入法{% endblock %}
+{% block title %}服务器错误（500）- 豆包输入法官网下载{% endblock %}
 {% block keywords %}500,服务器错误,豆包输入法{% endblock %}
 {% block description %}服务器开小差了，请稍后重试或返回豆包输入法首页继续浏览。{% endblock %}
 
@@ -16,7 +16,7 @@
     <img src="{% static 'images/doubao/pc-logo.png' %}" class="w-[4.8125rem] h-[4.8125rem] rounded-[2.25rem]"
         alt="豆包输入法">
     <div class="error-code text-[#181818] mt-[1.6875rem]">500</div>
-    <div class="text-[1.8125rem] leading-[2.5625rem] font-[600] text-[#181818] mt-[0.75rem]">服务开小差了</div>
+    <h1 class="text-[1.8125rem] leading-[2.5625rem] font-[600] text-[#181818] mt-[0.75rem]">服务开小差了</h1>
     <div class="text-[1.0625rem] leading-[1.75rem] font-[500] text-[#7f7f7f] mt-[0.5625rem]">服务器遇到一些问题，请稍后重试，或返回首页继续浏览。</div>
     <div class="flex items-center gap-x-[0.75rem] mt-[1.6875rem]">
         <a href="/"

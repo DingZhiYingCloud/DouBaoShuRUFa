@@ -1,7 +1,7 @@
 {% extends 'template.html' %}
 {% load static %}
 
-{% block title %}豆包输入法 - 高效输入，享受输出{% endblock %}
+{% block title %}豆包输入法官方下载 - 高效输入享受输出，支持Windows/Mac/iOS/Android{% endblock %}
 {% block keywords %}豆包键盘，豆包输入法，豆包输入法官网，豆包输入法windows，豆包输入法mac，豆包输入法ios，豆包输入法安卓，豆包输入法苹果版，输入法，键盘，豆包，搜狗输入法，百度输入法，讯飞输入法，打字，拼音，九键，语音转文字，豆包同款语音，用嘴打字，语音写作，方言识别，轻声语音识别，智能长输入，超强联想，越用越准，高效输入，享受输出{% endblock %}
 {% block description %}字节跳动旗下输入法，集成了先进好用的豆包语音能力，支持多种方言精准识别、智能纠错及轻声输入。同时键盘输入有强大的纠错、长输入能力与结合上下文的智能联想，让输入法成为你最好的输入 copilot。{% endblock %}
 
@@ -25,8 +25,8 @@
 <link rel="stylesheet" href="{% static 'css/doubao-pc.css' %}">
 <link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/doubao/favicon-96x96.png' %}">
 <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/doubao/apple-touch-icon.png' %}">
-<meta property="og:title" content="豆包输入法">
-<meta property="og:description" content="高效输入，享受输出">
+<meta property="og:title" content="豆包输入法官方下载 - 高效输入享受输出">
+<meta property="og:description" content="字节跳动旗下豆包输入法，集成豆包语音能力，支持多方言精准识别、智能纠错与轻声输入，覆盖Windows/Mac/iOS/Android多端。">
 <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'images/doubao/og-logo.png' %}">
 {% endblock %}
 
@@ -43,10 +43,10 @@
             <div class="flex flex-col absolute top-[22.125rem] right-[18.125rem]">
                 <img src="{% static 'images/doubao/pc-logo.png' %}"
                     class="w-[4.8125rem] h-[4.8125rem] rounded-[2.25rem]" alt="豆包输入法">
-                <div
+                <h1
                     class="font-['PingFang_SC'] text-[3.125rem] leading-[4.375rem] font-[600] text-[#000000] whitespace-nowrap w-[15.625rem]">
                     <span>豆</span><span>包</span><span>输</span><span>入</span><span>法</span>
-                </div>
+                </h1>
                 <div
                     class="font-['PingFang_SC'] text-[1.6875rem] leading-[2.375rem] tracking-[0.16875rem] text-[#00000099] whitespace-nowrap w-[15.625rem]">
                     <div class="flex items-center"></div><span>高</span><span>效</span><span>输</span><span>入</span><span
@@ -225,7 +225,7 @@
             class="relative block w-[3.875rem] h-[1.5rem] text-[#4f84ff] font-[500] hover:cursor-pointer">
             <div class="absolute left-[0rem] top-[0rem] w-[3.375rem]">感谢名单</div>
             <img src="{% static 'images/doubao/arrow-right-blue.png' %}"
-                class="absolute left-[3.0625rem] top-[0.3125rem] w-[0.8125rem] h-[0.8125rem]" alt="">
+                class="absolute left-[3.0625rem] top-[0.3125rem] w-[0.8125rem] h-[0.8125rem]" alt="查看感谢名单">
         </a>
     </div>
 </div>
