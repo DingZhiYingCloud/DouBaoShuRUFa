@@ -1,0 +1,30 @@
+{% extends 'template.html' %}
+{% load static %}
+
+{% block title %}页面未找到 - 豆包输入法{% endblock %}
+{% block keywords %}404,页面未找到,豆包输入法{% endblock %}
+{% block description %}您访问的页面不存在或已被移除，请返回豆包输入法首页继续浏览。{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/doubao-pc.css' %}">
+<link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/doubao/favicon-96x96.png' %}">
+{% endblock %}
+
+{% block content %}
+<div
+    class="flex flex-col items-center justify-center min-h-screen w-full bg-[#fafafa] font-['PingFang_SC'] text-center px-[2.25rem] py-[3.75rem]">
+    <img src="{% static 'images/doubao/pc-logo.png' %}" class="w-[4.8125rem] h-[4.8125rem] rounded-[2.25rem]"
+        alt="豆包输入法">
+    <div class="error-code text-[#181818] mt-[1.6875rem]">404</div>
+    <div class="text-[1.8125rem] leading-[2.5625rem] font-[600] text-[#181818] mt-[0.75rem]">页面走丢了</div>
+    <div class="text-[1.0625rem] leading-[1.75rem] font-[500] text-[#7f7f7f] mt-[0.5625rem]">您访问的页面不存在或已被移除，可以返回首页继续浏览。</div>
+    <div class="flex items-center gap-x-[0.75rem] mt-[1.6875rem]">
+        <a href="/"
+            class="inline-flex items-center justify-center h-[3.75rem] px-[1.875rem] rounded-[0.75rem] text-[1.25rem] font-[600] transition-colors cursor-pointer bg-[#4f84ff] text-white hover:bg-[#779fff]">返回首页</a>
+        <a href="javascript:history.back();"
+            class="inline-flex items-center justify-center h-[3.75rem] px-[1.875rem] rounded-[0.75rem] text-[1.25rem] font-[600] transition-colors cursor-pointer bg-[#0000001a] text-[#7f7f7f] hover:opacity-90">返回上一页</a>
+    </div>
+</div>
+
+{% include 'common_html/footer.html' %}
+{% endblock %}
