@@ -98,6 +98,12 @@ python manage.py runserver 127.0.0.1:8000
 - **降级**：请求失败、超时或返回异常时，自动使用模块内的 `SNAPSHOT_DOWNLOADS` 快照，页面不报错、不空白。
 - **二维码内容**：iOS / Android 指向移动端落地页，HarmonyOS 指向华为应用市场链接。
 
+`SpiderServices/friend_links.py` 负责全站友情链接：
+
+- **实时接口**：`GET {XIAOYING_API_BASE}/api/seo/friend_links`，携带 `app_id` / `timestamp` / `nonce` / `sign`（HMAC-SHA256）公共参数。
+- **服务端渲染（SSR）**：通过 `Web/context_processors.friend_links` 上下文处理器注入到每一个页面，搜索引擎直接可见，**无需前端再发起 API 请求**；区块经 `Web/templates/common_html/friend_links.html`（被页脚包含）渲染在所有页面底部。
+- **缓存与降级**：结果缓存 1 小时；接口未配置、调用失败或签名异常时自动降级为空（页面不报错、不空白）。
+
 如需接入其它数据源，在该目录下新增模块并在视图中调用即可，视图层已有 `try/except` 兜底。
 
 ## 自定义与扩展

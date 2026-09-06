@@ -17,6 +17,12 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY = "None"
 # 跨域请求配置，允许所有源的跨域请求（由 .env 中 CORS_ORIGIN_ALLOW_ALL 控制）
 CORS_ORIGIN_ALLOW_ALL = os.getenv('CORS_ORIGIN_ALLOW_ALL', 'False').lower() in ('true', '1', 'yes')
 
+# 小影 API（友情链接功能）配置
+XIAOYING_API_BASE = os.getenv('XIAOYING_API_BASE', '')
+XIAOYING_API_APPID = os.getenv('XIAOYING_API_APPID', '')
+XIAOYING_API_APPSECRET = os.getenv('XIAOYING_API_APPSECRET', '')
+FRIEND_LINK_REPLACE = os.getenv('FRIEND_LINK_REPLACE', 'off')
+
 
 # Application definition
 
@@ -54,6 +60,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Web.context_processors.friend_links',
             ],
         },
     },
